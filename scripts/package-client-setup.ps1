@@ -143,6 +143,8 @@ Copy-Item -Path (Join-Path $RepoRoot 'AGENTS.md') -Destination (Join-Path $stage
 Copy-Item -Path (Join-Path $RepoRoot 'CHANGELOG.md') -Destination (Join-Path $stageRoot 'CHANGELOG.md') -Force
 Copy-Item -Path (Join-Path $RepoRoot 'scripts\uninstall-all.ps1') -Destination (Join-Path $stageRoot 'uninstall.ps1') -Force
 Copy-Item -Path (Join-Path $RepoRoot 'scripts\uninstall-all.ps1') -Destination (Join-Path $stageRoot 'uninstall-all.ps1') -Force
+Copy-Item -Path (Join-Path $RepoRoot 'scripts\Install-RevitMCP.bat') -Destination (Join-Path $stageRoot 'Install-RevitMCP.bat') -Force
+Copy-Item -Path (Join-Path $RepoRoot 'scripts\Uninstall-RevitMCP.bat') -Destination (Join-Path $stageRoot 'Uninstall-RevitMCP.bat') -Force
 
 function Get-RelativePackagePath {
     param(

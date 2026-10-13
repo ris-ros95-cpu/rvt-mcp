@@ -23,6 +23,20 @@
   English · <a href="README.vi.md">Tiếng Việt</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a>
 </p>
 
+> ### 🇫🇷 Démarrage rapide (ce fork : chat IA dans Revit)
+> 1. Téléchargez `RvtMcp.Setup-*-win-x64.zip` depuis les [Releases de ce fork](https://github.com/ris-ros95-cpu/rvt-mcp/releases) et dézippez-le.
+> 2. Fermez Revit et Claude Desktop, puis double-cliquez **`Install-RevitMCP.bat`** (installe le complément Revit 2022–2027, le serveur `rvt-mcp.exe`, et connecte Claude Desktop, Claude Code et Codex détectés ; chaque config est sauvegardée en `.bak`).
+> 3. Ouvrez Revit 2026 → **Add-Ins → RvtMcp → Chat IA**, cliquez « Clé API… » (Anthropic ou OpenAI), et discutez. Ou utilisez Claude / Codex directement : l'outil `revit_*` est déjà disponible.
+>
+> Désinstaller : `Uninstall-RevitMCP.bat`. Détails : [docs/revit-chat.md](docs/revit-chat.md).
+>
+> ### 🇬🇧 Quick start (this fork: in-Revit AI chat)
+> 1. Download `RvtMcp.Setup-*-win-x64.zip` from [this fork's Releases](https://github.com/ris-ros95-cpu/rvt-mcp/releases) and unzip.
+> 2. Close Revit and Claude Desktop, double-click **`Install-RevitMCP.bat`** (add-in + server + auto-wiring of detected Claude Desktop, Claude Code and Codex, with `.bak` backups).
+> 3. Open Revit 2026 → **Add-Ins → RvtMcp → Chat IA**, set your API key, chat. Claude/Codex can also use the `revit_*` tools directly.
+>
+> Fork of [bimwright/rvt-mcp](https://github.com/bimwright/rvt-mcp) (Apache-2.0); all original work and credit belong to its authors.
+
 ---
 
 ## What it is

@@ -70,6 +70,8 @@ namespace RvtMcp.Plugin
             if (config?.EnableAdaptiveBakeOrDefault == true)
                 bakeInboxButton = AddBakeInboxButton(panel, assemblyPath);
 
+            AddChatButton(application, panel, assemblyPath);
+
             panel.AddSlideOut();
             var settingsButton = AddSettingsButton(panel, assemblyPath);
             var languageButton = AddLanguageButton(panel, assemblyPath);
@@ -128,6 +130,20 @@ namespace RvtMcp.Plugin
                     CreatedButtons.Add(buttonName);
                 }
             }
+        }
+
+        private static PushButton AddChatButton(UIControlledApplication application, RibbonPanel panel, string assemblyPath)
+        {
+            const string buttonName = "ShowChatPane";
+            if (CreatedButtons.Contains(buttonName)) return null;
+            Chat.ChatPane.Register(application);
+            var data = new PushButtonData(buttonName, "Chat IA", assemblyPath, "RvtMcp.Plugin.Commands.ShowChatPaneCommand")
+            {
+                LargeImage = IconGenerator.History32,
+                Image = IconGenerator.History16,
+                ToolTip = "Chat avec Claude ou OpenAI/Codex dans Revit (outils rvt-mcp, confirmation des modifications)."
+            };
+            return AddPushButton(panel, data, buttonName);
         }
 
         private static PushButton AddSettingsButton(RibbonPanel panel, string assemblyPath)
